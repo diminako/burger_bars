@@ -1,4 +1,8 @@
 const mysql = require('mysql');
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 8080;
 
 let connection;
 
@@ -17,5 +21,10 @@ if (process.env.JAWSDB_URL) {
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connection");
-    connection.end();
+});
+
+app.get("/", (req, res) => res.send("connected!"));
+
+app.listen(PORT, function () {
+    console.log("You've connected at http://localhost:" + PORT);
 });
