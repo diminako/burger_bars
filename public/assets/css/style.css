@@ -30,18 +30,23 @@ list green - #b8f818
 header {
   text-align: center;
   align-content: center;
-  height: 10vh;
+  height: 120px;
+  background-color: #bcbcbc;
+  vertical-align: center;
 }
 
 h1 {
   padding-top: 40px;
+  vertical-align: center;
 }
 
+h2 {
+  text-decoration: underline;
+}
 
 li {
   padding: 5px;
   margin: 5px;
-  background: #8d632c;
 }
 
 ul {
