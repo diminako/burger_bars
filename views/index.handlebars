@@ -1,0 +1,33 @@
+<h1>Retro Backlog</h1>
+
+<main class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2>Need to Complete</h2>
+      {{#each games}}
+      {{#unless completed}}
+      {{> games/game-block completed=false}}
+      {{/unless}}
+      {{/each}}
+    </div>
+
+    <div class="col-sm-3">
+      <h2>Completed</h2>
+      {{#each games}}
+      {{#if completed}}
+      {{> games/game-block completed=true}}
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 formDiv">
+      <form class="formInput" action="">
+        <input type="text" name="name" id="gameAdd">
+        <button class="submit">Add Game to Backlog!</button>
+      </form>
+    </div>
+  </div>
+
+</main>
