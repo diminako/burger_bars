@@ -15,13 +15,14 @@ $(function () {
   $(".formInput").on("submit", function (event) {
     event.preventDefault();
     var newGame = {
-      name: $("#gameAdd").val().trim(),
+      name: $("#gameCreate").val().trim(),
     };
     $.ajax("/api/games", {
       type: "POST",
       data: newGame
     }).then(
       function () {
+        console.log("created")
         location.reload();
       }
     );

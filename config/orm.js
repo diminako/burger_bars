@@ -35,21 +35,21 @@ var orm = {
     });
   },
 
-  create: function (table, vals, cols, cb) {
-    // var queryString = "INSERT INTO " + table;
+  create: function (table, cols, vals, cb) {
+    var queryString = "INSERT INTO " + table;
 
-    // queryString += " (";
-    // queryString += vals;
-    // queryString += ") ";
-    // queryString += "VALUES (";
-
-
-    var queryString = "INSERT INTO games (name, completed) VALUES (";
+    queryString += " (";
     queryString += cols.toString();
-    queryString += ", 0) ";
+    queryString += ") ";
+    queryString += "VALUES ('" + vals + "')";
+
+    console.log(vals);
 
     connection.query(queryString, vals, function (err, result) {
-      if (err) { throw err; }
+      if (err) {
+        throw err;
+      }
+
       cb(result);
     });
   },
