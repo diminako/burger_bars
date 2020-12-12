@@ -1,43 +1,48 @@
-<h1>Retro Backlog</h1>
+<div class="background">
 
-<main class="container">
-  <div class="row">
-    <div class="col-sm-7">
-      <h2>Need to Complete</h2>
-      <ul>
+  <header>
+    <h1>Retro Backlog</h1>
+  </header>
 
-        {{#each games}}
-        {{#unless completed}}
-        {{> games/game-block completed=false}}
-        {{/unless}}
-        {{/each}}
+  <main class="container">
+    <div class="row gamesDiv">
+      <div class="col-sm-6">
+        <h2>Need to Complete</h2>
+        <ul>
 
-      </ul>
+          {{#each games}}
+          {{#unless completed}}
+          {{> games/game-block completed=false}}
+          {{/unless}}
+          {{/each}}
+
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-5">
+        <h2>Completed</h2>
+        <ul id="completedGames">
+          {{#each games}}
+          {{#if completed}}
+          {{> games/game-block completed=true}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
 
-    <div class="col-sm-5">
-      <h2>Completed</h2>
-      <ul>
-        {{#each games}}
-        {{#if completed}}
-        {{> games/game-block completed=true}}
-        {{/if}}
-        {{/each}}
-      </ul>
+    <div class="row">
+      <div class="col-sm-8 formDiv nes-field">
+        <form class="formInput" action="">
+          <button class="submit nes-balloon from-left nes-pointer">Add Game to Backlog!</button>
+          <div>
+            <label for="gameCreate name_field"></label>
+            <input class="nes-input" type="text" name="name" id="gameCreate name_field">
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <h2>Add a game to the Backlog.</h2>
-    <div class="col-sm-8 formDiv">
-      <form class="formInput" action="">
-        <div>
-          <label for="gameCreate"></label>
-          <input type="text" name="name" id="gameCreate">
-        </div>
-        <button class="submit">Add Game to Backlog!</button>
-      </form>
-    </div>
-  </div>
-
-</main>
+  </main>
+</div>

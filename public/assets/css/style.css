@@ -1,3 +1,42 @@
+/* 
+colors
+grey - #7c7c7c
+light grey - #bcbcbc
+white - #fcfcfc
+red - #a80020
+list green - #b8f818
+
+
+
+*/
+
+
+
+
+* {
+  font-family: 'Press Start 2P', cursive;
+  /* background-color: #b8f818; */
+}
+
+.background {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+
+header {
+  text-align: center;
+  align-content: center;
+  height: 10vh;
+}
+
+h1 {
+  padding-top: 40px;
+}
+
 
 li {
   padding: 5px;
@@ -5,16 +44,50 @@ li {
   background: #8d632c;
 }
 
+ul {
+ background-color: #bcbcbc;
+
+}
+
 .label {
   font-weight: bold;
+}
+
+.btnDiv {
+  padding: 5px;
+}
+
+.btnDiv .nes-btn {
+  justify-content: end;
+}
+
+.btnSpan {
+ 
 }
 
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
 }
 
 .form-group {
   margin-bottom: 5px;
 }
+
+.formDiv {
+  padding-top: 20px;
+  align-content: center;
+}
+
+.gamesDiv {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.submit {
+  float: right;
+}
+
+#completedGames .btnDiv {
+  text-decoration: line-through;
+} 
