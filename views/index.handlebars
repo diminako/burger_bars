@@ -2,22 +2,28 @@
 
 <main class="container">
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-7">
       <h2>Need to Complete</h2>
-      {{#each games}}
-      {{#unless completed}}
-      {{> games/game-block completed=false}}
-      {{/unless}}
-      {{/each}}
+      <ul>
+
+        {{#each games}}
+        {{#unless completed}}
+        {{> games/game-block completed=false}}
+        {{/unless}}
+        {{/each}}
+
+      </ul>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-5">
       <h2>Completed</h2>
-      {{#each games}}
-      {{#if completed}}
-      {{> games/game-block completed=true}}
-      {{/if}}
-      {{/each}}
+      <ul>
+        {{#each games}}
+        {{#if completed}}
+        {{> games/game-block completed=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
     </div>
   </div>
 

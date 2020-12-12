@@ -1,8 +1,11 @@
 <div>
-	{{name}}
-	{{#unless completed}}
-	<button class="complete" data-id="{{id}}">
-		Completed
-	</button>
-	{{/unless}}
+	<div class="btnDiv">
+		{{name}}
+		{{#unless completed}}
+		<span class="">
+			<button class="pixelart-to-css complete" data-id="{{id}}">Defeated!</button>
+
+		</span>
+		{{/unless}}
+	</div>
 </div>

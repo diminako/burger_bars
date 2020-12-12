@@ -22,7 +22,6 @@ $(function () {
       data: newGame
     }).then(
       function () {
-        console.log("created")
         location.reload();
       }
     );
