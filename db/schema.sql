@@ -6,7 +6,7 @@ USE snes_rpg_db;
 CREATE TABLE games
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
+	name varchar(23) NOT NULL,
 	completed BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
