@@ -1,6 +1,7 @@
 var mysql = require("mysql");
 let connection;
 
+// checks to see if on the localhost environment or if using jawsdb environment
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -13,6 +14,7 @@ if (process.env.JAWSDB_URL) {
   });
 };
 
+// establishing connection
 connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
