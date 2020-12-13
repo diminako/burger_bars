@@ -1,4 +1,4 @@
-### Schema
+/* ### Schema created db table. */
 DROP DATABASE IF EXISTS snes_rpg_db;
 CREATE DATABASE snes_rpg_db;
 USE snes_rpg_db;

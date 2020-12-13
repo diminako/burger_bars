@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// adds interactivity to the completed buttons next to the backlog games
 $(function () {
   $(".complete").on("click", function (event) {
     var id = $(this).data("id");
@@ -12,6 +12,8 @@ $(function () {
     );
   });
 
+
+  // grabs our value from the form input
   $(".formInput").on("submit", function (event) {
     event.preventDefault();
     var newGame = {

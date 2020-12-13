@@ -1,23 +1,20 @@
 /* 
+NES colors/There
 colors
 grey - #7c7c7c
 light grey - #bcbcbc
 white - #fcfcfc
 red - #a80020
 list green - #b8f818
-
-
-
 */
 
-
-
-
+/* global variable to change the font to pixelated */
 * {
   font-family: 'Press Start 2P', cursive;
   /* background-color: #b8f818; */
 }
 
+/* background pixel image */
 .background {
   background-image: url("../images/background.png");
   background-size: cover;
@@ -26,7 +23,7 @@ list green - #b8f818
   background-position: center;
 }
 
-
+/* controls the header */
 header {
   text-align: center;
   align-content: center;
@@ -65,8 +62,6 @@ ul {
 .btnDiv .nes-btn {
   justify-content: end;
 }
-
-
 
 .create-update-form {
   padding: 5px;

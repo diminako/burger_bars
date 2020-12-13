@@ -27,5 +27,3 @@ app.listen(PORT, function () {
     // Log (server-side) when our server has started
     console.log("Server listening on: http://localhost:" + PORT);
 });
-
-// Phew completed need to go through and comment.

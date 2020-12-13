@@ -1,5 +1,5 @@
 <div class="background">
-
+  {{!-- header outside of other content --}}
   <header>
     <h1>Retro Backlog</h1>
   </header>
@@ -7,9 +7,10 @@
   <main class="container">
     <div class="row gamesDiv">
       <div class="col-sm-6">
+        {{!-- Backlog games section that havent been completed yet. --}}
         <h2>Need to Complete</h2>
         <ul>
-
+          {{!-- cycles through #each item in the table db and checks if game has been completed or not --}}
           {{#each games}}
           {{#unless completed}}
           {{> games/game-block completed=false}}
@@ -20,6 +21,7 @@
       </div>
       <div class="col-sm-1"></div>
 
+      {{!-- Section consiting of games that have been completed --}}
       <div class="col-sm-5">
         <h2>Completed</h2>
         <ul id="completedGames">
@@ -32,6 +34,7 @@
       </div>
     </div>
 
+    {{!-- form section that allows you to add another game to your backlog --}}
     <div class="row">
       <div class="col-sm-8 formDiv nes-field">
         <form class="formInput" action="">

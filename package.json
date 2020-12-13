@@ -1,5 +1,5 @@
 {
-  "name": "burger_bars",
+  "name": "retro_backlog",
   "version": "1.0.0",
   "description": "Using handlebars and mysql",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diminako/burger_bars.git"
+    "url": "git+https://github.com/diminako/retro_backlog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diminako/burger_bars/issues"
+    "url": "https://github.com/diminako/retro_backlog/issues"
   },
-  "homepage": "https://github.com/diminako/burger_bars#readme",
+  "homepage": "https://github.com/diminako/retro_backlog#readme",
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",

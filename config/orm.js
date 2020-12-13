@@ -1,19 +1,10 @@
 var connection = require("../config/connection.js");
 
-function printQuestionMarks(num) {
-  var arr = [];
-  for (var i = 0; i < num; i++) {
-    arr.push("?");
-  }
-  return arr.toString();
-}
-
+//  creates an object to sql arr
 function objToSql(ob) {
   var arr = [];
-
   for (var key in ob) {
     var value = ob[key];
-
     if (Object.hasOwnProperty.call(ob, key)) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
@@ -24,7 +15,9 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+//  orm functions
 var orm = {
+  // controls the querystring for all columns from table inputs
   all: function (tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
@@ -32,7 +25,7 @@ var orm = {
       cb(result);
     });
   },
-
+  //  controls the create/post querystring for the database
   create: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -41,14 +34,13 @@ var orm = {
     queryString += ") ";
     queryString += "VALUES ('" + vals + "')";
 
-    console.log(vals);
-
     connection.query(queryString, vals, function (err, result) {
       if (err) { throw err; }
       cb(result);
     });
   },
 
+  //  controls the update/put querystring for the database
   update: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
     queryString += " SET ";
@@ -62,6 +54,7 @@ var orm = {
     });
   },
 
+  //  controls the delete querystring for the database
   delete: function (table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
