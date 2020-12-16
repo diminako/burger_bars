@@ -1,4 +1,4 @@
-# Express Note Taker  
+# Retro Backlog  
 ![badge](https://img.shields.io/static/v1?label=Nintendo&message=SNES&color=red)  
 ## Description  
 This is a Full-Stack Application utilizing HTML/CSS JavaScript, node.js, express, handlebars,  
@@ -11,7 +11,7 @@ database has already been completed or not and position them in their corespondi
 * nes.css Framework for being a super cool.  
 * The Cat App for providing me with a good template to work from.  
 ## Link to the Web App  
-[Express Note Taker!](https://cryptic-reaches-66396.herokuapp.com/)  
+[Retro Backlog!](https://cryptic-reaches-66396.herokuapp.com/)  
 ## Screenshot  
 ![Image of the webpage](https://raw.githubusercontent.com/diminako/retro_backlog/main/public/assets/images/screenshot.png)  
 ## Table of Contents  
